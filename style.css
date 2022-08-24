@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+}
+
+.d-none {
+    display: none;
+}
+
+
+/*if you click on an image, you wil see this code/start*/
+.whole-side-black {
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/black.jpg);
+}
+
+#close-image {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    filter: invert(100);
+    height: 50px;
+}
+
+#arrow-left {
+    position: absolute;
+    top: 50%;
+    margin-left: 15px;
+    filter: invert(100);
+    height: 50px;
+    cursor: pointer;
+}
+
+#arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-right: 15px;
+    filter: invert(100);
+    height: 50px;
+    cursor: pointer;
+}
+/*end*/
+
+
+/*header start*/
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85px;
+    box-shadow: -2px 0px 6px 0px rgb(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+.header span {
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.spain-flag {
+    height: 28px;
+    width: auto;
+    margin-left: 10px;
+    margin-top: 3px;
+}
+/*header end*/
+
+
+/*pictures start*/
+.pictures-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.pictures-container img {
+    height: 250px;
+    margin: 1.5px 2px;
+    object-fit: cover;
+    flex: 1;
+}
+
+.pictures-container img:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.container-big-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.image-on-black-background {
+    height: 95%;
+    object-fit: cover;
+    text-align: center;
+}
+/*pictures end*/
+
+
+
+/*responsive Style */
+
+@media (max-width: 930px) {
+    .image-on-black-background {
+        height: 70%;
+    }
+}
+
+@media (max-width: 770px) {
+    .image-on-black-background {
+        height: 60%;
+    }
+}
+
+@media (max-width: 670px) {
+    .image-on-black-background {
+        width: 100%;
+        height: 70%;
+    }
+}
+
+@media (max-width: 450px) {
+    .image-on-black-background {
+        height: 50%;
+    }
+}
+
+@media (max-width: 360px) {
+    .pictures-container img {
+        max-width: 300px;
+    }
+
+    .image-on-black-background {
+        height: 50%;
+    }    
+}
+
+@media (max-width: 320px) {
+    .header span {
+        font-size: 26px;
+    }
+
+    .spain-flag {
+        height: 26px;
+    }
+
+    .pictures-container img {
+        max-width: 255px;
+    }
+}
